@@ -1,0 +1,46 @@
+# Project: Project4
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o Host.o Manager.o FoodMaker.o CoffeeMaker.o Order.o Patron.o
+LINKOBJ  = main.o Host.o Manager.o FoodMaker.o CoffeeMaker.o Order.o Patron.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Project4.exe
+CXXFLAGS = $(CXXINCS) -std=gnu++11
+CFLAGS   = $(INCS) -std=gnu++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Host.o: Host.cpp
+	$(CPP) -c Host.cpp -o Host.o $(CXXFLAGS)
+
+Manager.o: Manager.cpp
+	$(CPP) -c Manager.cpp -o Manager.o $(CXXFLAGS)
+
+FoodMaker.o: FoodMaker.cpp
+	$(CPP) -c FoodMaker.cpp -o FoodMaker.o $(CXXFLAGS)
+
+CoffeeMaker.o: CoffeeMaker.cpp
+	$(CPP) -c CoffeeMaker.cpp -o CoffeeMaker.o $(CXXFLAGS)
+
+Order.o: Order.cpp
+	$(CPP) -c Order.cpp -o Order.o $(CXXFLAGS)
+
+Patron.o: Patron.cpp
+	$(CPP) -c Patron.cpp -o Patron.o $(CXXFLAGS)
