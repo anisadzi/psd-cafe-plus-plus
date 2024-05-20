@@ -1,0 +1,67 @@
+# Project: Project2
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o Character.o GameObject.o Item.o Location.o NullCommand.o NullPassage.o NullRoom.o Passage.o PassageDefaultEnterCommand.o Player.o Room.o RoomDefaultEnterCommand.o ZOOrkEngine.o
+LINKOBJ  = main.o Character.o GameObject.o Item.o Location.o NullCommand.o NullPassage.o NullRoom.o Passage.o PassageDefaultEnterCommand.o Player.o Room.o RoomDefaultEnterCommand.o ZOOrkEngine.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = ZOOrk.exe
+CXXFLAGS = $(CXXINCS) -std=gnu++11
+CFLAGS   = $(INCS) -std=gnu++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Character.o: Character.cpp
+	$(CPP) -c Character.cpp -o Character.o $(CXXFLAGS)
+
+GameObject.o: GameObject.cpp
+	$(CPP) -c GameObject.cpp -o GameObject.o $(CXXFLAGS)
+
+Item.o: Item.cpp
+	$(CPP) -c Item.cpp -o Item.o $(CXXFLAGS)
+
+Location.o: Location.cpp
+	$(CPP) -c Location.cpp -o Location.o $(CXXFLAGS)
+
+NullCommand.o: NullCommand.cpp
+	$(CPP) -c NullCommand.cpp -o NullCommand.o $(CXXFLAGS)
+
+NullPassage.o: NullPassage.cpp
+	$(CPP) -c NullPassage.cpp -o NullPassage.o $(CXXFLAGS)
+
+NullRoom.o: NullRoom.cpp
+	$(CPP) -c NullRoom.cpp -o NullRoom.o $(CXXFLAGS)
+
+Passage.o: Passage.cpp
+	$(CPP) -c Passage.cpp -o Passage.o $(CXXFLAGS)
+
+PassageDefaultEnterCommand.o: PassageDefaultEnterCommand.cpp
+	$(CPP) -c PassageDefaultEnterCommand.cpp -o PassageDefaultEnterCommand.o $(CXXFLAGS)
+
+Player.o: Player.cpp
+	$(CPP) -c Player.cpp -o Player.o $(CXXFLAGS)
+
+Room.o: Room.cpp
+	$(CPP) -c Room.cpp -o Room.o $(CXXFLAGS)
+
+RoomDefaultEnterCommand.o: RoomDefaultEnterCommand.cpp
+	$(CPP) -c RoomDefaultEnterCommand.cpp -o RoomDefaultEnterCommand.o $(CXXFLAGS)
+
+ZOOrkEngine.o: ZOOrkEngine.cpp
+	$(CPP) -c ZOOrkEngine.cpp -o ZOOrkEngine.o $(CXXFLAGS)
