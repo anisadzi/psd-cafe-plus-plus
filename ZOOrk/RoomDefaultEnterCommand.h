@@ -16,4 +16,3 @@ public:
 
 
 #endif //ZOORK_ROOMDEFAULTENTERCOMMAND_H
-

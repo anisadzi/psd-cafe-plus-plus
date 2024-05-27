@@ -21,4 +21,3 @@ protected:
 };
 
 #endif //ZOORK_COMMAND_H
-

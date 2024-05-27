@@ -1,3 +1,5 @@
+#include <iostream>
+#include <memory>
 #include "RoomDefaultEnterCommand.h"
 #include "Passage.h"
 #include "Player.h"
@@ -6,6 +8,7 @@
 
 
 int main() {
+
     std::shared_ptr<Room> start = std::make_shared<Room>("start-room",
                            "You are standing in an open field west of a white house, with a boarded front door.\n");
 
@@ -54,7 +57,13 @@ int main() {
     std::shared_ptr<Room> rainbow_road = std::make_shared<Room>("rainbow-road",
                             "Congratulations! You've reached the Rainbow Road. You win!.\n");
 	
-	
+	 // Create items
+    Item torch("torch", "A burning torch to light your way.");
+    Item key("key", "A rusty key that seems to fit into a lock.");
+
+    // Add items to the white house
+    white_house->addItem(torch);
+    white_house->addItem(key);
 	
 	
 	

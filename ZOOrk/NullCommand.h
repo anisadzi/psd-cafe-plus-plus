@@ -17,4 +17,3 @@ public:
 
 
 #endif //ZOORK_NULLCOMMAND_H
-

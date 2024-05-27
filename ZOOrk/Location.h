@@ -1,10 +1,15 @@
+//
+// Created by Richard Skarbez on 5/7/23.
+//
+
 #ifndef ZOORK_LOCATION_H
 #define ZOORK_LOCATION_H
-#include <string>
-#include <memory>
+
 #include "Command.h"
 #include "GameObject.h"
 #include "NullCommand.h"
+
+#include <memory>
 
 class Location : public GameObject {
 public:
@@ -21,4 +26,3 @@ protected:
 };
 
 #endif //ZOORK_LOCATION_H
-

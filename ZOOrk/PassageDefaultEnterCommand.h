@@ -19,4 +19,3 @@ public:
 
 
 #endif //ZOORK_PASSAGEDEFAULTENTERCOMMAND_H
-

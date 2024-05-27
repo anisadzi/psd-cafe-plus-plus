@@ -34,4 +34,3 @@ protected:
 };
 
 #endif //ZOORK_PASSAGE_H
-

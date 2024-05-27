@@ -26,4 +26,3 @@ protected:
 
 
 #endif //ZOORK_GAMEOBJECT_H
-
